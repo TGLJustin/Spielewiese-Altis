@@ -1,0 +1,288 @@
+author = "Tonic Edit: Triotexx & A4P";
+onLoadName = "Altis Life RPG v3.1.4.7";
+onLoadMission = "Teamspeak3: 78.143.39.184:18700";
+loadScreen = "intro.paa";
+joinUnassigned = 1;
+respawn = BASE;
+respawndelay = 7;
+disabledAI = true;
+disableChannels[]={0,1,2};
+enableDebugConsole = 0;
+respawnDialog = 0;
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 75;
+};
+
+wreckLimit = 13;
+wreckRemovalMinTime = 320;
+wreckRemovalMaxTime = 1200;
+corpseLimit = 150;
+corpseRemovalMinTime = 999;
+corpseRemovalMaxTime = 9999;
+
+#include "dialog\MasterHandler.h"
+
+class RscTitles
+{
+	#include "dialog\ui.hpp"
+	#include "dialog\progress.hpp"
+	#include "dialog\hud_nameTags.h"
+    #include "=BTC=_Logistic\=BTC=_Lift\=BTC=_Hud.h"
+};
+
+class CfgFunctions
+{
+	#include "Functions.h"
+};
+
+class CfgSounds
+{
+  sounds[] = {};
+  
+  class SirenLong
+  {
+    name = "SirenLong";
+    sound[] = {"\sounds\si1.ogg", 1.0, 1};
+    titles[] = {};
+  };
+  class tazersound
+  {
+    name = "Tazersound";
+    sound[] = {"\sounds\tazer.ogg", 0.25, 1};
+    titles[] = {};
+  };  
+  class handcuff
+  {
+    name = "handcuff";
+    sound[] = {"\sounds\handcuffs.ogg", 0.25, 1};
+    titles[] = {};
+  };
+  	// sounds
+  class bank_alarm
+  {
+	name = "bank_alarm";  
+	sound[] = {"\sounds\alarm.ogg", 1.0, 1};  
+	titles[] = {};
+  };
+  class lock_sound
+  {
+	name = "lock_sound";  
+	sound[] = {"\sounds\vehicle_lock.ogg", 1.0, 1};  
+	titles[] = {};
+  };  
+  class unlock_sound
+  {
+	name = "unlock_sound";  
+	sound[] = {"\sounds\unlock.ogg", 1.0, 1};  
+	titles[] = {};
+  };
+  class notarzt_sound
+  {
+	name = "notarzt_sound";  
+	sound[] = {"\sounds\notarzt_sirene.ogg", 1.0, 1};  
+	titles[] = {};
+  };
+  
+	class intro
+	{
+	name = "intro";  
+	sound[] = {"\sounds\intro.ogg", 1.0, 1};  
+	titles[] = {};
+	};  
+  
+	class flashbang
+	{
+		name = "flashbang";
+		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class car_alarm
+    {
+        name = "car_alarm";
+        sound[] = {"\sounds\car_alarm.ogg", 1.0, 1};
+        titles[] = {};
+    };
+	
+	class Yelp
+	{
+		name = "Yelp";
+		sound[] = {"\sounds\si2.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class Fu
+	{
+		name = "Fu";
+		sound[] = {"\sounds\fu1.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class dog_whine
+	{
+		name = "dog_whine";
+		sound[] = {"sounds\dog_whine.ogg", 1, 1};
+		titles[] = {};
+
+	};
+
+	class dog_growl
+	{
+		name = "dog_growl";
+		sound[] = {"sounds\dog_growl.ogg", 1, 1};
+		titles[] = {};
+
+	};		
+
+	class dog_ruff
+	{
+		name = "dog_ruff";
+		sound[] = {"sounds\dog_ruff.ogg", 1, 1};
+		titles[] = {};
+
+	};
+
+	class whistle
+	{
+		name = "whistle";
+		sound[] = {"sounds\whistle.ogg", 1, 1};
+		titles[] = {};
+
+	};
+
+	class dog_close
+	{
+		name = "dog_close";
+		sound[] = {"sounds\dog_close.ogg", 1, 1};
+		titles[] = {};
+
+	};
+
+	class dog_one
+	{
+		name = "dog_one";
+		sound[] = {"sounds\dog_one.ogg", 1, 1};
+		titles[] = {};
+
+	};	
+};
+
+class CfgDebriefing
+{
+	class NotWhitelisted
+	{
+		title = "Mission Failed";
+		subtitle = "Du bist nicht gewhitelisted fÃ¼r diesen Slot!";
+		description = "Melde dich im TS: xtraders.de um dich fÃ¼r diese Position zu bewerben, wir suchen noch!";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	class Blacklisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are blacklisted from cops";
+		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
+	class SpyGlass
+	{
+		title = "The SpyGlass sees you";
+		subTitle = "SpyGlass hat dich gesehen!";
+		description = "Du wurdest beim cheaten erwischt, die Admins wurden informiert!";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+};
+
+class CfgNotifications
+{
+	class MedicalRequestEmerg
+	{
+		title = "Medizinischer Notfall";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 5;
+		priority = 7;
+	};
+	
+	class DeliveryAssigned
+	{
+		title = "Lieferauftrag akzeptiert!";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 10;
+		priority = 7;
+	};
+	
+	class DeliveryFailed
+	{
+		title = "Lieferauftrag fehlgeschlagen!";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+		description = "%1";
+		duration = 7;
+		priority = 7;
+	};
+	
+	class DeliverySucceeded
+	{
+		title = "Lieferauftrag abgeschlossen!";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
+		description = "%1";
+		duration = 6;
+		priority = 6;
+	};
+	
+	class AdacMessage
+	{
+		title = "ADAC Einsatz";
+		iconPicture = "icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+    
+    class TextMessage
+	{
+		title = "Neue SMS";
+		iconPicture = "icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class PoliceDispatch
+	{
+		title = "Polizei Leitstelle";
+		iconPicture = "icons\messagepolice.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class AdminDispatch
+	{
+		title = "Admin Leitstelle";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class AdminMessage
+	{
+		title = "Admin Nachricht";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+};
