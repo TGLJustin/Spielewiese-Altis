@@ -237,8 +237,8 @@ class Mission
 	randomSeed=490298;
 	class Intel
 	{
-		briefingName="Altis Life RPG";
-		overviewText="Altis Life RPG 3.1.4+";
+		briefingName="Hardcore Roleplay Server Spielewiese";
+		overviewText="Teamspeak3: 78.143.39.184:18700";
 		resistanceEast=1;
 		startWeather=0.099999994;
 		startWind=0.25;
