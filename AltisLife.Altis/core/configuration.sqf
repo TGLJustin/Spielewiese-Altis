@@ -239,34 +239,34 @@ switch (playerSide) do
 	case west: 
 	{
 		// make it basic
-		life_atmcash = 300000; //Starting Bank Money
+		life_atmcash = 50000; //Starting Bank Money
 		life_paycheck = 1450; //Paycheck Amount
 
 
 	};
 	case civilian: 
 	{
-		life_atmcash = 300000; //Starting Bank Money
+		life_atmcash = 50000; //Starting Bank Money
 		life_paycheck = 550; //Paycheck Amount
 
 		if((getPlayerUID player) in __GETC__(life_gang_sd) ) then {
-			life_atmcash = 300000; //Starting Bank Money
+			life_atmcash = 50000; //Starting Bank Money
 			life_paycheck = 3850; //Paycheck Amount
 		};
 		if((getPlayerUID player) in __GETC__(life_gang_adac) ) then {
-			life_atmcash = 300000; //Starting Bank Money
+			life_atmcash = 50000; //Starting Bank Money
 			life_paycheck = 5500; //Paycheck Amount
 		};
 
 	};
 	
 	case independent: {
-		life_atmcash = 300000;
+		life_atmcash = 50000;
 		life_paycheck = 1450;
 	};
 	case east: 
 	{
- 		life_atmcash = 300000;
+ 		life_atmcash = 50000;
  		life_paycheck = 1450;
  	};
 };
