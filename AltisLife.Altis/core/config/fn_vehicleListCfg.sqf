@@ -97,10 +97,10 @@ switch (_shop) do
 		[
 			["O_MRAP_02_F",5000000],
 			["I_MRAP_03_F",5000000],
-			["O_MRAP_02_hmg_F",12000000],
-			["B_Heli_Light_01_F",2500000],
-			["O_Heli_Light_02_F",5000000],
-			["I_Heli_light_03_F",8500000]
+			["B_Quadbike_01_F",2500],
+			["C_Offroad_01_F",9000],
+			["O_Heli_Light_02_unarmed_F",350000],
+			["B_Heli_Light_01_F",2500000]
 		];
 	};
 	
