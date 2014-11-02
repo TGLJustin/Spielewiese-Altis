@@ -36,7 +36,6 @@ StartProgress = true;
 [] execVM "NamelessGaming\PlayersStats.sqf"; // Anzeige Spieler Online
 [] execVM "NamelessGaming\FPS.sqf"; // FPS
 [] execVM "zlt_fieldrepair.sqf";
-[] execVM "scripts\fn_statusBar.sqf"; //Load the Statusbar
 [] execVM "scripts\unfall.sqf"; //Load the Statusbar
 
 execVM "NamelessGaming\DynamicWeatherEffects.sqf"; //Dynamisches Wetter laden
