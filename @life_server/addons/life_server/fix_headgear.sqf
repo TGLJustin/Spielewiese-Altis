@@ -40,7 +40,7 @@ if (isServer) then
 	if(local _this && !isPlayer _this) then
 	{
 		_uniform = _clothes call BIS_fnc_selectRandom;
-		_this forceAddUniform _uniform;
+		_this addUniform _uniform;
 	};
 };
 

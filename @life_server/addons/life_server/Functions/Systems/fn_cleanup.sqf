@@ -3,7 +3,7 @@
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
-	Server-side cleanup script on vehicles using Arma2Net DateTime function.
+	Server-side cleanup script on vehicles.
 	Sort of a lame way but whatever.
 */
 private["_deleted"];
@@ -12,7 +12,7 @@ while {true} do
 {
 	private["_veh","_units"];
 	sleep (60 * 60);
-	/*{
+	{
 		_veh = _x;
 		_vehicleClass = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "vehicleClass");
 		
@@ -50,12 +50,11 @@ while {true} do
 					_query = format["UPDATE vehicles SET active='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
 					waitUntil {!DB_Async_Active};
 					[_query,1] call DB_fnc_asyncCall;
-					//_sql = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
 				};
 			};
 		};
 	} foreach vehicles;
-	*/
+	
 	sleep (3 * 60); //3 minute cool-down before next cycle. 
 	{
 		if((typeOf _x) in ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F", "Land_Can_V3_F","Land_Money_F","Land_Suitcase_F"]) then

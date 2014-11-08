@@ -50,6 +50,7 @@ class CfgFunctions
 			class bool{};
 			class mresString {};
 			class updatePartial {};
+			class repaintVehicle {};
 		};
 	};
 	
@@ -103,13 +104,20 @@ class CfgFunctions
 			class chopShopSell {};
 			class clientDisconnect {};
 			class cleanupRequest {};
-			
+			class vehicleRepaint {};
+			class keyManagement {};
+			class setObjVar {};
+			class getPrices {};
+			class ajustprices {};
+		};
+		
+		class Smartphone
+		{
+			file = "\life_server\Functions\Smartphone";
 			class handleMessages {};
 			class msgRequest {};
 			class cleanupMessages {};
-
-
-		};
+		};	
 		
 		class Housing
 		{
@@ -130,16 +138,6 @@ class CfgFunctions
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};
-		};
-
-		class Hero
-		{
-			file = "\life_server\Functions\Hero";
-			class vehicleSave {};
-			class fetchPlayerVehicle {};
-			class vehicleRefresh {};
-			class initWanted {};
-
 		};
 	};
 };
