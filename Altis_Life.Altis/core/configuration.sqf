@@ -492,7 +492,9 @@ life_garage_prices =
 	["O_Truck_03_covered_F",15000],
 	["O_Truck_03_transport_F",20000],
 	["I_Truck_02_box_F",25000],
-	["O_Truck_03_device_F",60000]
+	["O_Truck_03_device_F",60000],
+	["O_Heli_Transport_04_F",25000],
+	["B_Heli_Transport_03_F",10000]
 ];
 __CONST__(life_garage_prices,life_garage_prices);
 
@@ -528,6 +530,8 @@ life_garage_sell =
 	["O_Truck_03_transport_F",1000],
 	["O_Truck_03_covered_F",10],
 	["I_Truck_02_box_F",250000],
-	["O_Truck_03_device_F",200000]
+	["O_Truck_03_device_F",200000],
+	["O_Heli_Transport_04_F",200000],
+	["B_Heli_Transport_03_F",10000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
